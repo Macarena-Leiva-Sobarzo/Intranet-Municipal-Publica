@@ -1,0 +1,1 @@
+{"require":{"php":">=8.2","phpoffice/phpspreadsheet":"^5.0","smalot/pdfparser":"^2.12"},"config":{"allow-plugins":false}}
