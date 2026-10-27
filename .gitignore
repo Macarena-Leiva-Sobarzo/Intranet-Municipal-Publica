@@ -1,0 +1,38 @@
+# Configuración privada de la base de datos
+/config/base_datos.php
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Bases de datos y respaldos
+*.sql
+*.sql.gz
+*.sql.zip
+*.zip
+*.rar
+*.7z
+*.bak
+*.backup
+
+# Documentos cargados
+/almacenamiento/*
+!/almacenamiento/.htaccess
+
+# Registros y archivos temporales
+*.log
+error_log
+*.tmp
+*.temp
+*.swp
+*~
+
+# Configuración personal del editor
+/.vscode/
+/.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini

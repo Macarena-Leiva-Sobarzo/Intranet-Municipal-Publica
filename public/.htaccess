@@ -1,0 +1,9 @@
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^plantilla-personas/?$ plantilla_personas.php [QSA,END]
+    RewriteRule ^primer-acceso/?$ registro_inicial.php [QSA,END]
+    RewriteRule ^(inicio|noticias|directorio|documentos|sistemas|soporte|administracion|ayuda)/?$ index.php?modulo=$1 [QSA,END]
+    RewriteRule ^(ingresar|descargar|respaldar|aviso)/?$ $1.php [QSA,END]
+    RewriteRule ^recursos/(css/[^/]+[.]css|imagenes/[^/]+[.](png|jpg|jpeg|svg|ico)|interacciones[.]js)$ $1 [END]
+</IfModule>

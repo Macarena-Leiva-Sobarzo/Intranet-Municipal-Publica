@@ -1,0 +1,17 @@
+Options -Indexes
+DirectoryIndex index.php
+ErrorDocument 403 /Intranet_municipal/public/aviso.php
+ErrorDocument 404 /Intranet_municipal/public/aviso.php
+ErrorDocument 500 /Intranet_municipal/public/aviso.php
+<FilesMatch "\.(sql|log|ini)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^plantilla-personas/?$ public/plantilla_personas.php [QSA,END]
+    RewriteRule ^primer-acceso/?$ public/registro_inicial.php [QSA,END]
+    RewriteRule ^(inicio|noticias|directorio|documentos|sistemas|soporte|administracion|ayuda)/?$ public/index.php?modulo=$1 [QSA,END]
+    RewriteRule ^(ingresar|descargar|respaldar|aviso)/?$ public/$1.php [QSA,END]
+    RewriteRule ^recursos/(css/[^/]+[.]css|imagenes/[^/]+[.](png|jpg|jpeg|svg|ico)|interacciones[.]js)$ public/$1 [END]
+</IfModule>
